@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class FishingMechanics : MonoBehaviour
 {
+    [Header("Finshing wating/rating")]
+    [SerializeField] float minWating;
+    [SerializeField] float maxWating;
+
+    [SerializeField] float minRate;
+    [SerializeField] float maxRate;
+
+    int[] fishes = new int[10];
+
+
     //fishing move
     [Header("Fishing area")]
     [SerializeField] Transform topbound;
@@ -35,12 +45,24 @@ public class FishingMechanics : MonoBehaviour
     [SerializeField] float progressBarDecay;
     float catchProgress;
 
-
-    private void FixedUpdate()
+    void Start()
     {
+        for (int i = 0; i < fishes.Length; i++)
+            fishes[i] = 0;
+    }
+
+    public void FixedUpdate()
+    {
+        //tiempo de espera
+        float wating = Random.Range(minWating, maxWating);
+        //convert to int
+        int watingtime = (int)wating;
+        System.Threading.Thread.Sleep(watingtime);
+        //What a fish!!
         MoveFish();
         MoveHook();
         CheckProgress();
+
     }
     private void CheckProgress()
     {
@@ -53,11 +75,48 @@ public class FishingMechanics : MonoBehaviour
             if(catchProgress >= 1)
             {
                 Debug.Log("has pescado un pescado");
+                float fishRate = Random.Range(minRate, maxRate);
+
+                if (fishRate == 1000)
+                    //aparece bobble
+                    fishes[0]++;
+                else if (fishRate <= 999 && fishRate >= 890)
+                    //aparece  rape
+                    fishes[1]++;
+                else if (fishRate <= 889 && fishRate >= 780)
+                    //aparece  pulpo
+                    fishes[2]++;
+                else if (fishRate <= 779 && fishRate >= 670)
+                    //aparece  gamba
+                    fishes[3]++;
+                else if (fishRate <= 669 && fishRate >= 560)
+                    //aparece  bacalo
+                    fishes[4]++;
+                else if (fishRate <= 559 && fishRate >= 450)
+                    //aparece  calamar
+                    fishes[5]++;
+                else if (fishRate <= 449 && fishRate >= 340)
+                    //aparece  pez de roca
+                    fishes[6]++;
+                else if (fishRate <= 339 && fishRate >= 230)
+                    //aparece  trucha
+                    fishes[7]++;
+                else if (fishRate <= 229 && fishRate >= 120)
+                    //aparece  atun
+                    fishes[8]++;
+                else if (fishRate <= 119 && fishRate >= 10)
+                    //aparece  mejillon
+                    fishes[9]++;
+                else
+                    //aparece  almeha
+                    fishes[10]++;
             }
         }
         else
         {
             catchProgress -= progressBarDecay * Time.deltaTime;
+            if (catchProgress <= 0)
+                Debug.Log("para la pesca");
         }
         catchProgress = Mathf.Clamp(catchProgress, 0, 1);
 
