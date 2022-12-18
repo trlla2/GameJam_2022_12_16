@@ -135,7 +135,7 @@ GameObject:
   m_Layer: 0
   m_Name: topbound
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 497274792}
   - component: {fileID: 497274793}
   m_Layer: 0
-  m_Name: silueta pez.png
+  m_Name: siluetapez
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +226,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f95ea1ef42859b84cb8b1ff08fe01215, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -370,6 +370,7 @@ Transform:
   m_Children:
   - {fileID: 644904253}
   - {fileID: 1707223048}
+  - {fileID: 1341136643}
   m_Father: {fileID: 2068559183}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,7 +437,7 @@ GameObject:
   - component: {fileID: 644904253}
   - component: {fileID: 644904254}
   m_Layer: 0
-  m_Name: Square
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,8 +454,7 @@ Transform:
   m_LocalPosition: {x: 0.3392647, y: 0.0025426738, z: 0}
   m_LocalScale: {x: 0.2, y: 0.8571428, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 988452958}
+  m_Children: []
   m_Father: {fileID: 623728803}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,12 +534,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988452957}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.7163577e-10, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.010735303, y: 0.43254268, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.85714275, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 644904253}
+  m_Father: {fileID: 1341136643}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &988452959
@@ -582,7 +582,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0.7647059, b: 0.10980392, a: 1}
   m_FlipX: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 1004858449}
   - component: {fileID: 1004858450}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,7 +666,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.2509804, g: 0.6313726, b: 0.30588236, a: 1}
   m_FlipX: 0
@@ -690,7 +690,7 @@ GameObject:
   m_Layer: 0
   m_Name: bottombound
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -709,6 +709,38 @@ Transform:
   m_Father: {fileID: 1707223048}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1341136642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341136643}
+  m_Layer: 0
+  m_Name: progressBarContiner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1341136643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341136642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35, y: -0.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 988452958}
+  m_Father: {fileID: 623728803}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707223047
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +752,7 @@ GameObject:
   - component: {fileID: 1707223048}
   - component: {fileID: 1707223049}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: LeftBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,6 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068559183}
+  - component: {fileID: 2068559184}
   m_Layer: 0
   m_Name: fishingGame
   m_TagString: Untagged
@@ -821,7 +854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068559182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19632342, y: 0.017798718, z: -9.885565}
+  m_LocalPosition: {x: 0.19632342, y: 0.017798718, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -829,3 +862,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2068559184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068559182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc46bc0fc37b37408fecd83434c5ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topbound: {fileID: 191534010}
+  bottombound: {fileID: 1228285434}
+  siluetapez: {fileID: 497274792}
+  smoothMotion: 3
+  fishTimeRandomizer: 3
+  hook: {fileID: 1004858449}
+  hookSize: 0.15
+  hookSpeed: 0.5
+  hookGravity: -0.05
+  progressBarContiner: {fileID: 1341136643}
+  hookPower: 0.5
+  progressBarDecay: 0.1

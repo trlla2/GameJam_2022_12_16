@@ -1,28 +1,31 @@
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float minWating;
-    public float maxWating;
 
-    public float minRate;
-    public float maxRate;
+  public float minWating;
+  public float maxWating;
 
-    int almehea;
-    int mejillon;
-    int atun;
-    int trucha;
-    int pezDeRoca;
-    int calamar;
-    int bacalao;
-    int rape;
-    int pulpo;
-    int gamba;
-    bool bobblecat;
-    // Start is called before the first frame update
-    void Start()
+  public float minRate;
+  public float maxRate;
+
+  int almehea;
+  int mejillon;
+  int atun;
+  int trucha;
+  int pezDeRoca;
+  int calamar;
+  int bacalao;
+  int rape;
+  int pulpo;
+  int gamba;
+  bool bobblecat;
+ 
+// Start is called before the first frame update
+void Start()
     {
        
     }
@@ -74,6 +77,8 @@ public class Player : MonoBehaviour
             else 
                 //aparece  almeha
                 almehea++;
+        
         }
     }
 }
+ */
