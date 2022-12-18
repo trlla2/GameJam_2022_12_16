@@ -14,15 +14,18 @@ public class FishControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.localScale = new Vector2(Random.Range(-0.6f, 0.6f), 0.6f);
-        speed = speed * Random.Range(0.1f, 1f);
+        float val = Random.Range(-1, 1);
+        float valf = Random.Range(0.1f, 1f);
+        if (val < 0) { transform.localScale = new Vector2(-valf, valf); }
+        else { transform.localScale = new Vector2(valf, valf); }
+        speed = speed * Random.Range(0.1f, 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
         manager.actual_fishes++;
-
+        transform.eulerAngles = new Vector3(0, 0, 0);
         Vector2 direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         direction.Normalize();
         Debug.Log(direction);
@@ -33,4 +36,12 @@ public class FishControl : MonoBehaviour
 
         rb.AddForce(direction * speed);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Cielo")
+        {
+            rb.velocity = new Vector3(rb.velocity.x, -rb.velocity.y, 0);
+        }
+    }
+
 }
